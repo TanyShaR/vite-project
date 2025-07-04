@@ -2,6 +2,7 @@ import './App.css'
 import { About } from './components/About';
 import { Job } from './components/Job';
 import { TaskList } from './components/TaskList';
+import { ThemeSwitch } from './components/ThemeSwitch/ThemeSwitch';
 
 const tasks = [
     {
@@ -20,6 +21,7 @@ const tasks = [
 function App() {
   return (
     <>
+      <ThemeSwitch />
       <About />
       <Job
         title="Kino Union Filmtheater. Berlin"
