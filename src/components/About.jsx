@@ -2,7 +2,7 @@ export const About = () => {
     return (
         <div>
             <h1>Tatjana Retter</h1>
-            <p>Full-Stack Designer</p>
+            <p>Full-Stack Designerin</p>
         </div>
     )
 }
