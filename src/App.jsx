@@ -1,8 +1,10 @@
+import { useState } from "react";
 import "./App.css";
 import { About } from "./components/About";
 import { Job } from "./components/Job";
 import { TaskList } from "./components/TaskList";
 import { ThemeSwitch } from "./components/ThemeSwitch/ThemeSwitch";
+import { Counter } from "./components/Counter/Counter";
 
 const tasks = [
   {
@@ -19,12 +21,13 @@ const tasks = [
 ];
 
 function App() {
-  const onSwitch = (theme) => {
-    console.log(theme);
-  };
+  const [count, setCount] = useState(0);
+  const incCount = () => setCount((x) => x + 1);
+
   return (
     <>
-      <ThemeSwitch onSwitch={onSwitch} />
+      <Counter count={count} onIncrement={incCount}/>
+      <ThemeSwitch />
       <About />
       <Job
         title="Kino Union Filmtheater. Berlin"

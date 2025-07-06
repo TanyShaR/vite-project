@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./ThemeSwitch.css";
-export const ThemeSwitch = ({ onSwitch }) => {
+
+export const ThemeSwitch = () => {
   const [theme, setTheme] = useState("light");
   /* response[0]; // theme: light
      response[1]; // setTheme() */
@@ -9,14 +10,13 @@ export const ThemeSwitch = ({ onSwitch }) => {
     setTheme("dark");
     /* theme = "dark";
     onSwitch(theme); */
-    onSwitch("dark");
   };
   const onLightClick = () => {
     setTheme("light");
     /* theme = "light";
     onSwitch(theme); */
-    onSwitch("light");
   };
+  
   return (
     <div className="theme-switch">
       <div className="theme-switch__actions">
